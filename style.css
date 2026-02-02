@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff0f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 2.5rem;
+    transition: all 0.5s ease;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* The Pretty Yes Button */
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+}
+
+/* The Boring No Button */
+#noBtn {
+    padding: 5px 10px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: default;
+}
+
+/* Heart Animation */
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 2rem;
+    color: #ff4d6d;
+    user-select: none;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
